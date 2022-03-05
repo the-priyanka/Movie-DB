@@ -7,7 +7,7 @@ const AppProvider = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
   const [movies, setMovies] = useState([]);
-  const [query, setQuery] = useState("OMG");
+  const [query, setQuery] = useState("hindi");
 
   const fetchMovies = async (url) => {
     setIsLoading(true);
