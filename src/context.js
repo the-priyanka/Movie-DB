@@ -31,7 +31,9 @@ const AppProvider = (props) => {
   }, [query]);
 
   return (
-    <AppContext.Provider value="hello">
+    <AppContext.Provider
+      value={{ isLoading, error, movies, query, setQuery }}
+    >
       {props.children}
     </AppContext.Provider>
   );
