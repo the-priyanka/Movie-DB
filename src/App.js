@@ -1,7 +1,16 @@
-import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Movie from "./components/SingleMovie";
 
 function App() {
-  return <div className="App">priyanka</div>;
+  return (
+    <Switch>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+      <Route path="/movies/:id" children={<Movie />}></Route>
+    </Switch>
+  );
 }
 
 export default App;
